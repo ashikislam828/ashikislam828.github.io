@@ -3,90 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Asikul Islam — numerical PDEs, tensorial reduced-order modeling, PDE-constrained optimization, and scientific computing." />
   <title>Asikul Islam :: Research</title>
-  <meta name="description" content="Asikul Islam, Ph.D. student in Applied Mathematics at the University of Houston." />
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
-  <div class="page">
-    
-    <div class="nav">
-      <a href="../index.html">Home</a>
-      <a href="../research/index.html">Research</a>
-      <a href="../teaching/index.html">Teaching</a>
-      <a href="../publications/index.html">Publications</a>
-      <a href="../programs/index.html">Programs</a>
-      <a href="../vitae/index.html">Vitae</a>
-      <a href="../seminars/index.html">Seminars</a>
-    </div>
-    
-    
-<h1>Asikul Islam</h1>
+<div class="page">
+  <nav class="nav" aria-label="Main navigation">
+    <a href="../index.html">Home</a>
+<a href="../vitae/index.html">Bio</a>
+<a href="../research/index.html">Research</a>
+<a href="../teaching/index.html">Teaching</a>
+<a href="../publications/index.html">Publications</a>
+<a href="../seminars/index.html">Presentations</a>
+<a href="../programs/index.html">Service &amp; Awards</a>
+  </nav>
+  <h1>Asikul Islam</h1>
 <div class="subtitle">Department of Mathematics, University of Houston</div>
-
-<h2>Research Interests</h2>
-<p>
-  My research centers on the development of efficient and accurate numerical methods for high-dimensional
-  parametric systems governed by partial differential equations. I am broadly interested in numerical analysis,
-  scientific computing, optimization, low-rank approximations, and data-informed modeling.
-</p>
-
-<ul>
-  <li>Reduced-order modeling for parametric PDEs</li>
-  <li>Tensor methods and low-rank decompositions</li>
-  <li>PDE-constrained optimization</li>
-  <li>Finite difference and finite volume discretization</li>
-  <li>Operator splitting and time integration methods</li>
-  <li>Scientific computing for biomedical modeling</li>
-  <li>Scientific software development in MATLAB and Python</li>
-</ul>
-
+  <main>
+    <h2>Research</h2>
+<p>My research lies at the intersection of computational mathematics, numerical partial differential equations, low-rank tensor methods, and PDE-constrained optimization. I develop efficient algorithms for nonlinear parametric models that must be evaluated repeatedly in simulation, parameter estimation, and uncertainty analysis. Brain tumor growth modeling provides a central application of this work.</p>
 <h2>Current Research</h2>
-<p>
-  My current research focuses on reduced-order models for coupled reaction-diffusion systems arising in
-  multispecies brain tumor growth simulation. This work combines mathematical modeling, numerical time stepping,
-  tensor-based decompositions, surrogate modeling, and computational performance analysis.
-</p>
-
-<p>
-  I am also working on numerical methods for PDE-constrained optimization, with emphasis on parabolic PDEs,
-  computational efficiency, and the interface between classical numerical methods and data-driven approximation.
-</p>
-
-<h2>Selected Topics</h2>
-<h3>Reduced-order models for coupled PDE systems</h3>
-<p>
-  I study projection-based and tensorial surrogate models for parameterized PDE systems, including POD-based
-  methods and tensor-structured reduced-order approximations.
-</p>
-
-<h3>Computational brain tumor modeling</h3>
-<p>
-  A major application area of my research is glioblastoma growth modeling. I develop numerical models and
-  efficient computational workflows for predicting tumor evolution using coupled reaction-diffusion systems.
-</p>
-
-<h3>Scientific computing and software</h3>
-<p>
-  I implement and analyze numerical methods using MATLAB, Python, and FEniCSx, with an interest in reliable,
-  reproducible, and scalable computational tools for scientific applications.
-</p>
-
-    
-    <div class="footer">
-      <div class="footnav">
-        <a href="../index.html">Home</a>
-        <a href="../research/index.html">Research</a>
-        <a href="../teaching/index.html">Teaching</a>
-        <a href="../publications/index.html">Publications</a>
-        <a href="../programs/index.html">Programs</a>
-        <a href="../vitae/index.html">Vitae</a>
-        <a href="../seminars/index.html">Seminars</a>
-      </div>
-      © 2026 Asikul Islam <span class="last-updated">(last updated: 3/22/26)</span>
-      &nbsp; <a href="mailto:aislam25@cougarnet.uh.edu">Contact me</a>.
-    </div>
-    
-  </div>
+<h3>Tensorial Reduced-Order Modeling for Parametric PDEs</h3>
+<p>I develop tensorial reduced-order models for nonlinear reaction–diffusion systems, from scalar tumor-growth equations to a six-species, nine-parameter model. My work uses higher-order singular value decomposition (HOSVD/Tucker) and Tensor Train representations, together with intrusive and non-intrusive reduced formulations. Spatial pre-compression, randomized linear algebra, and memory-efficient snapshot processing enable large-scale offline construction. Our numerical studies demonstrate online speedups of approximately 85–120 times over the corresponding full-order simulations.</p>
+<h3>PDE-Constrained Optimization and Parameter Estimation</h3>
+<p>I study the recovery of unknown model parameters from observations of tumor evolution. Using a discretize-then-optimize approach, I derive sensitivities, discrete adjoints, gradients, and second-order information that are consistent with the fully discrete forward solver. For the multi-species problem, the numerical framework combines finite-volume discretization with Strang splitting, Crank–Nicolson diffusion steps, and Runge–Kutta reaction integration. I investigate Gauss–Newton, Newton-type, and constrained optimization methods, including regularization and discrepancy-based parameter selection.</p>
+<h3>Derivative-Consistent Reduced-Order Inversion</h3>
+<p>I am developing an inverse framework in which parameter-dependent Tucker reduced bases are differentiated consistently with the reduced forward map. This requires accounting for the parameter dependence of the reduced basis, projected operators, and initial conditions, rather than differentiating only the reduced state variables. The goal is to obtain fast reduced sensitivities and reliable Gauss–Newton parameter estimates while preserving a transparent connection to the high-fidelity model.</p>
+<h3>Correcting Reduced-Model Error in Inverse Problems</h3>
+<p>In collaborative work with Pegah Amiri and Andreas Mang, I investigate how approximation error in a reduced forward model affects the parameters recovered by an inverse solver. We use hyper-differential sensitivity analysis and post-optimality correction to estimate the change in an optimum caused by the difference between reduced- and full-order models. This approach aims to improve parameter accuracy with only a small number of additional full-order evaluations.</p>
+<h2>Previous Research</h2>
+<p>My earlier work includes applications of fuzzy logic to forecasting and decision-making under uncertainty, as well as comparative studies of shortest-path algorithms.</p>
+<h2>Future Interests</h2>
+<p>I am interested in extending derivative-consistent model reduction to uncertainty quantification and statistical inference; developing adaptive tensor approximation and sampling methods; and combining physics-based numerical models with scientific machine learning. A long-term goal is to build scalable, error-aware computational workflows for inverse problems and patient-specific biomedical modeling.</p>
+<p><a href="../research_statement.pdf" target="_blank" rel="noopener">Read my research statement (PDF)</a>.</p>
+  </main>
+  <footer class="footer">
+    <nav class="footnav" aria-label="Footer navigation">
+      <a href="../index.html">Home</a>
+<a href="../vitae/index.html">Bio</a>
+<a href="../research/index.html">Research</a>
+<a href="../teaching/index.html">Teaching</a>
+<a href="../publications/index.html">Publications</a>
+<a href="../seminars/index.html">Presentations</a>
+<a href="../programs/index.html">Service &amp; Awards</a>
+    </nav>
+    &copy; 2026 Asikul Islam <span class="last-updated">(last updated: October 18, 2026)</span>
+    &nbsp; <a href="mailto:aislam25@cougarnet.uh.edu">Contact me</a>.
+  </footer>
+</div>
 </body>
 </html>
